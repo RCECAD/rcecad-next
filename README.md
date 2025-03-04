@@ -75,7 +75,7 @@ Este repositório contém algumas das tecnologias mais modernas para desenvolvim
 Para começar, clone o repositório no seu computador:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/RCECAD/rcecad-next.git
 ```
 
 ### 2. Instalar as Dependências
