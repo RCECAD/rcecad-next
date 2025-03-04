@@ -1,4 +1,3 @@
-Segue abaixo a versão atualizada do readme com as novas tecnologias adicionadas:
 
 ---
 
