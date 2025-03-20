@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Inter_Tight } from "next/font/google";
+import { Lato } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -7,14 +7,9 @@ export const metadata: Metadata = {
   description: "placeholder",
 };
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const interTight = Inter_Tight({
-  variable: "--font-inter-tight",
-  subsets: ["latin"],
+const lato = Lato({
+  subsets: ['latin'],
+  weight: ["100", "300", "400", "700", "900"]
 });
 
 export default function RootLayout({
@@ -25,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${interTight.variable} antialiased`}
+        className={`${lato.className} ${lato.style} antialiased`}
       >
         {children}
       </body>
