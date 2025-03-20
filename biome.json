@@ -30,7 +30,8 @@
 				"noArrayIndexKey": "off"
 			},
 			"a11y": {
-				"noRedundantAlt": "off"
+				"noRedundantAlt": "off",
+				"noLabelWithoutControl": "off"
 			}
 		}
 	},
