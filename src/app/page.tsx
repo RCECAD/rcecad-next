@@ -1,5 +1,6 @@
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Anchor } from "@/components/ui/anchor";
 
 export default function Home() {
 	return (
@@ -8,6 +9,9 @@ export default function Home() {
 				<Label label="E-mail">
 					<Input />
 				</Label>
+        <Anchor href="/">
+          Esqueceu a senha?
+        </Anchor>
 			</main>
 		</div>
 	);

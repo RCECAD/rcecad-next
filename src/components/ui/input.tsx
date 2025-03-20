@@ -1,4 +1,4 @@
-import type { InputHTMLAttributes, JSX, ReactNode } from "react";
+import type { InputHTMLAttributes, JSX } from "react";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 	className?: string;
@@ -6,7 +6,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 
 type ComponentSetup = (props: InputProps) => JSX.Element;
 
-export const Input: ComponentSetup = ({ children, className, ...rest }) => {
+export const Input: ComponentSetup = ({ className, ...rest }) => {
 	return (
 		<input
 			{...rest}

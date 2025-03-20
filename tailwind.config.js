@@ -2,7 +2,11 @@
   export default {
        content: ["./src/**/*.{html,js,tsx,}"],
         theme: {
-          extend: {},
+          extend: {
+            dropShadow: {
+              '3xl': ''
+            }
+          },
         },
         plugins: [],
       }
