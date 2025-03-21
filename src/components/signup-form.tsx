@@ -7,8 +7,14 @@ import { InputLabel } from "./ui/input-label";
 import { InputRadio } from "./ui/input-radio";
 import { signupSchema, type SignupFormValues } from "@/schemas/signup-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useTransition } from "react";
+import { signUp } from "@/data/services/signup";
+import { toast } from "sonner";
+import { LoaderPinwheel } from "lucide-react";
+import { redirect } from "next/navigation";
 
 export const SignupForm = () => {
+	const [isPending, startTransition] = useTransition();
 	const {
 		register,
 		handleSubmit,
@@ -21,7 +27,18 @@ export const SignupForm = () => {
 	const userType = watch("userType");
 
 	const onSubmit = (data: SignupFormValues) => {
-		console.log("data:", data);
+		startTransition(async () => {
+			const res = await signUp({ user: data });
+			if (!res.success) {
+				toast.error("Opa, ocorreu um erro:", {
+					description: res.reason,
+				});
+			}
+			toast.success("Sua conta foi criada com sucesso!", {
+				description: "Você será redirecionado para a página de login.",
+			});
+			redirect("/auth/signin");
+		});
 	};
 
 	return (
@@ -106,7 +123,8 @@ export const SignupForm = () => {
 			</div>
 
 			<div className="w-full mt-4">
-				<Button fullWidth variant="primary" type="submit">
+				<Button disabled={isPending} fullWidth variant="primary" type="submit">
+					{isPending && <LoaderPinwheel className="animate-spin" />}
 					Criar minha conta
 				</Button>
 			</div>
