@@ -13,7 +13,7 @@ export const Anchor: ComponentSetup = ({ children, href, ...props }) => {
 		<Link
 			href={href}
 			{...props}
-			className="text-sky-600 text-lg font-medium hover:underline"
+			className="text-sky-600 text-lg font-medium w-fit hover:underline"
 		>
 			{children}
 		</Link>
