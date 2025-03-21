@@ -1,17 +1,11 @@
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Anchor } from "@/components/ui/anchor";
 
 export default function Home() {
 	return (
 		<div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
 			<main className="flex flex-col gap-8 p-24 row-start-2 items-center sm:items-start bg-zinc-200">
-				<Label label="E-mail">
-					<Input />
-				</Label>
-        <Anchor href="/">
-          Esqueceu a senha?
-        </Anchor>
+				<Anchor href="/">Esqueceu a senha?</Anchor>
 			</main>
 		</div>
 	);
