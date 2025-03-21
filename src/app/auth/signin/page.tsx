@@ -1,3 +1,3 @@
 export default function Page() {
-	return <div className="text-zinc-900">a</div>;
+	return <div className="text-slate-900">a</div>;
 }
