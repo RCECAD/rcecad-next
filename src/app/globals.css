@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-lato-sans);
+  --font-mono: var(--font-lato-mono);
+  --drop-shadow-3xl: 0 15px 25px rgb(14 165 233 / 0.25)
 }
 
 :root {
