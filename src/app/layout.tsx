@@ -1,29 +1,29 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/toast";
 
 export const metadata: Metadata = {
-  title: "RCECAD",
-  description: "placeholder",
+	title: "RCECAD",
+	description: "placeholder",
 };
 
 const lato = Lato({
-  subsets: ['latin'],
-  weight: ["100", "300", "400", "700", "900"]
+	subsets: ["latin"],
+	weight: ["100", "300", "400", "700", "900"],
 });
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${lato.className} ${lato.style} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en">
+			<body className={`${lato.className} ${lato.style} antialiased`}>
+				<Toaster />
+				{children}
+			</body>
+		</html>
+	);
 }
