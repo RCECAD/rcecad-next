@@ -1,16 +1,17 @@
-import { SigninForm } from "@/components/signin-form";
-import { TextHeader } from "@/components/ui/text-header";
+import { Auth } from "@/components/layouts/auth";
+import { TextHeader } from "@/components/layouts/text-header";
+import { SigninForm } from "@/components/signin/signin-form";
 import { LogIn } from "lucide-react";
 
 export default function Page() {
 	return (
-		<div className="flex flex-col gap-8 w-full px-0 py-6 max-w-lg">
+		<Auth.Layout>
 			<TextHeader
 				title="Entrar"
 				description="Insira seus dados para acessar sua conta"
 				icon={LogIn}
 			/>
 			<SigninForm />
-		</div>
+		</Auth.Layout>
 	);
 }
