@@ -1,5 +1,5 @@
-import { SignupForm } from "@/components/signup-form";
-import { TextHeader } from "@/components/ui/text-header";
+import { TextHeader } from "@/components/layouts/text-header";
+import { SignupForm } from "@/components/signup/signup-form";
 
 export default function Page() {
 	return (
