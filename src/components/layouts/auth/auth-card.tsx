@@ -1,7 +1,7 @@
 import type { JSX, ReactNode } from "react";
 import { usePathname } from "next/navigation";
-import { MainTopic } from "./topics/main-topic";
-import { SignupTopic } from "./topics/signup-topic";
+import { MainTopic } from "../../topics/main-topic";
+import { SignupTopic } from "../../topics/signup-topic";
 
 interface AuthCardProps {
 	children: ReactNode;
@@ -24,7 +24,9 @@ export const AuthCard: ComponentSetup = ({ children }) => {
 			<div className="relative flex flex-col w-full h-full gap-2 items-center justify-center border-r-2 overflow-clip border-slate-300 text-4xl text-sky-400">
 				{renderTopic}
 			</div>
-			<div className="w-full h-full flex items-center justify-center">{children}</div>
+			<div className="w-full h-full flex items-center justify-center">
+				{children}
+			</div>
 		</div>
 	);
 };

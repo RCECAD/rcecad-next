@@ -1,10 +1,7 @@
 "use client";
 
 import { useForm } from "react-hook-form";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { InputLabel } from "./ui/input-label";
-import { InputRadio } from "./ui/input-radio";
+
 import { signupSchema, type SignupFormValues } from "@/schemas/signup-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTransition } from "react";
@@ -12,6 +9,10 @@ import { signUp } from "@/data/services/signup";
 import { toast } from "sonner";
 import { LoaderPinwheel } from "lucide-react";
 import { redirect } from "next/navigation";
+import { InputRadio } from "@/components/ui/input-radio";
+import { InputLabel } from "@/components/ui/input-label";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 export const SignupForm = () => {
 	const [isPending, startTransition] = useTransition();

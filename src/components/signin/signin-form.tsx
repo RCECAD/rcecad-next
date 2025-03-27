@@ -1,19 +1,19 @@
 "use client";
 
 import { Eye, EyeOff } from "lucide-react";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { InputLabel } from "./ui/input-label";
 import { useState } from "react";
 import { Anchor } from "@/components/ui/anchor";
+import { InputLabel } from "@/components/ui/input-label";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 export function SigninForm() {
 	const [showPassword, setShowPassword] = useState(false);
-  const inputType = showPassword ? "text" : "password";
+	const inputType = showPassword ? "text" : "password";
 
-  function handleShowPassword() {
-    setShowPassword(!showPassword);
-  }
+	function handleShowPassword() {
+		setShowPassword(!showPassword);
+	}
 
 	return (
 		<div className="flex flex-col gap-8">
@@ -25,9 +25,15 @@ export function SigninForm() {
 					<InputLabel htmlFor="password" label="Senha">
 						<Input id="password" required type={inputType} />
 						{showPassword ? (
-							<Eye className="absolute top-[58%] right-[15%] text-slate-400 cursor-pointer" onClick={handleShowPassword} />
+							<Eye
+								className="absolute top-[58%] right-[15%] text-slate-400 cursor-pointer"
+								onClick={handleShowPassword}
+							/>
 						) : (
-							<EyeOff className="absolute top-[58%] right-[15%] text-slate-400 cursor-pointer" onClick={handleShowPassword} />
+							<EyeOff
+								className="absolute top-[58%] right-[15%] text-slate-400 cursor-pointer"
+								onClick={handleShowPassword}
+							/>
 						)}
 					</InputLabel>
 					<Anchor href="/">Esqueceu a Senha?</Anchor>
