@@ -7,7 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useTransition } from "react";
 import { signUp } from "@/data/services/signup";
 import { toast } from "sonner";
-import { LoaderPinwheel } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import { redirect } from "next/navigation";
 import { InputRadio } from "@/components/ui/input-radio";
 import { InputLabel } from "@/components/ui/input-label";
@@ -117,15 +117,11 @@ export const SignupForm = () => {
 						{errors.password.message}
 					</span>
 				)}
-				<p className="text-xs font-medium text-slate-500">
-					A senha deve possuir pelo menos 8 caracteres, uma letra maiúscula e um
-					símbolo.
-				</p>
 			</div>
 
 			<div className="w-full mt-4">
 				<Button disabled={isPending} fullWidth variant="primary" type="submit">
-					{isPending && <LoaderPinwheel className="animate-spin" />}
+					{isPending && <Loader2 className="animate-spin" />}
 					Criar minha conta
 				</Button>
 			</div>
