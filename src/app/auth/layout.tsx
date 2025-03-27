@@ -1,5 +1,5 @@
 "use client";
-import { AuthCard } from "@/components/ui/auth-card";
+import { AuthCard } from "@/components/layouts/auth/auth-card";
 import type { ReactNode } from "react";
 
 const AuthLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
