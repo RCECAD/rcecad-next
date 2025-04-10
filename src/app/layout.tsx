@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${lato.className} ${lato.style} antialiased`}>
+			<body className={`${lato.className} ${lato.style} antialiased bg-slate-100`}>
 				<Toaster />
 				{children}
 			</body>
