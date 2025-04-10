@@ -51,7 +51,7 @@ export const SignupForm = () => {
 				<p className="text-lg font-medium text-slate-700">
 					Você é uma pessoa ou uma empresa?
 				</p>
-				<div className="flex h-fit gap-8 items-center">
+				<div className="flex h-fit gap-4 items-start flex-col lg:gap-8 lg:flex-row lg:items-center">
 					<InputRadio
 						{...register("userType")}
 						value="person"

@@ -69,11 +69,11 @@ export function SigninForm() {
 				<Button type="submit" variant="primary" fullWidth>
 					Entrar
 				</Button>
-				<div className="flex items-center gap-2">
+				<div className="flex items-center gap-2 flex-wrap">
 					<p className="font-medium text-slate-400 text-lg">
 						Ainda não possui uma conta?
 					</p>
-					<Anchor href="/">Registre-se</Anchor>
+					<Anchor href="/auth/signup/">Registre-se</Anchor>
 				</div>
 			</div>
 		</form>

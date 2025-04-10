@@ -21,8 +21,8 @@ export const AuthCard: ComponentSetup = ({ children }) => {
 			<ForgotPasswordTopic />
 		);
 	return (
-		<div className="flex w-full h-full gap-2 rounded-lg items-center justify-start border-2 drop-shadow-3xl bg-slate-200 border-slate-300 border-inside">
-			<div className="relative flex flex-col w-full h-full gap-2 items-center justify-center border-r-2 overflow-clip border-slate-300 text-4xl text-sky-400">
+		<div className="flex w-full max-w-[90%] lg:max-w-full h-full gap-2 rounded-lg items-center justify-start border-2 drop-shadow-3xl bg-slate-200 border-slate-300 border-inside">
+			<div className="hidden lg:flex flex-col w-full h-full gap-2 items-center justify-center border-r-2 overflow-clip border-slate-300 text-4xl text-sky-400 relative">
 				{renderTopic}
 			</div>
 			<div className="w-full h-full flex items-center justify-center">

@@ -3,7 +3,7 @@ import { SignupForm } from "@/components/signup/signup-form";
 
 export default function Page() {
 	return (
-		<div className="flex flex-col gap-8 w-full px-0 py-6 max-w-lg">
+		<div className="flex flex-col gap-6 w-full p-8 max-w-lg lg:px-0">
 			<TextHeader
 				title="Criar uma conta"
 				description="Insira os dados necessários para criar sua conta."
