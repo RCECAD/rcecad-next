@@ -12,7 +12,7 @@ export const MobileSidebar = () => {
   }
 
   return (
-    <div className="p-4 flex flex-col items-start justify-start gap-6 lg:hidden">
+    <div className="p-4 flex flex-col items-start justify-start gap-6 absolute bg-slate-100 lg:hidden">
       <button type="button" onClick={handleToggleSidebar}>
         <Menu size={40} />
       </button>
