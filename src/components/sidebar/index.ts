@@ -1,5 +1,7 @@
 import { DesktopSidebar } from "./desktop-sidebar"
+import { MobileSidebar } from "./mobile-sidebar"
 
-export const SidebarLayout = {
+export const SidebarComponent = {
   DesktopSidebar: DesktopSidebar,
+  MobileSidebar: MobileSidebar,
 }
